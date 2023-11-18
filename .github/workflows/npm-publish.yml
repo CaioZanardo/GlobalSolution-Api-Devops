@@ -19,6 +19,6 @@ jobs:
         echo "Node.js version: $NODE_VERSION"
         
         if [[ "$NODE_VERSION" != "v16."* ]]; then
-          echo "Error: Invalid Node.js version. Please use Node.js v16.x."
+          echo "Error: Invalid Node.js version. Please use Node.js v16.x or later."
           exit 1
         fi
