@@ -1,18 +1,37 @@
-name: Node.js CI
+name: Validate Node.js Version and Run npm start
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
-
+  validate-and-start:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-      - run: npm start
-      - run: npm run build --if-present
-      - run: npm test
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Validate Node.js Version
+      run: |
+        NODE_VERSION=$(node -v)
+        echo "Node.js version: $NODE_VERSION"
+        
+        if [[ "$NODE_VERSION" != "v16."* ]]; then
+          echo "Error: Invalid Node.js version. Please use Node.js v16.x or later."
+          exit 1
+        fi
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install
+      working-directory: ./api  
+
+    - name: Run npm start
+      run: npm start
+      working-directory: ./api   
