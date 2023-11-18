@@ -18,7 +18,7 @@
 ### Frontend
 
 - Só baixar o front.zip;
-- npm start na pasta;
+- npm start na pasta "front" do conteudo;
 
 ## Grupo
 
