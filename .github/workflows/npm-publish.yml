@@ -1,24 +1,27 @@
-name: Validate Node.js Version
+name: Node.js CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  validate-node:
+  build:
     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-    - name: Validate Node.js Version
-      run: |
-        NODE_VERSION=$(node -v)
-        echo "Node.js version: $NODE_VERSION"
-        
-        if [[ "$NODE_VERSION" != "v16."* ]]; then
-          echo "Error: Invalid Node.js version. Please use Node.js v16.x or later."
-          exit 1
-        fi
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
