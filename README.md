@@ -11,14 +11,21 @@
 ### Backend
 
 - npm start na pasta "api";
-- get no /listaAtividade traz a lista de atividades
+- get no /listaAtividade traz a lista de atividades;
 - post /register para registrar um usuario;
-- /login para ser utilizado pelo front
+- /login para ser utilizado pelo front.
 
 ### Frontend
 
 - Só baixar o front.zip;
 - npm start na pasta "front" do conteudo;
+- "http://localhost:3000" abrir a tela de cadastro/login;
+  
+![PRINT!](login.png)
+
+- Após cadastrar e logar, exibirá um alert, clicar em "OK" e exibirá a lista de atividades fisica o usuario.
+  
+![PRINT!](lista.png)
 
 ## Grupo
 
