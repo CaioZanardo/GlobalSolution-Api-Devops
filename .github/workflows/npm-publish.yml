@@ -20,7 +20,8 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+      working-directory: ./api   # Ajuste o caminho para a pasta 'api'
 
     - name: Run tests
       run: npm test
-      working-directory: ./api
+      working-directory: ./api   # Ajuste o caminho para a pasta 'api'
