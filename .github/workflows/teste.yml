@@ -14,10 +14,7 @@ jobs:
     - name: Checkout do código
       uses: actions/checkout@v2
       with:
-        path: GlobalSolution-Api-Devops
-
-    - name: Mover para o diretório da API
-      run: cd api
+        path: GlobalSolution-Api-Devops/api
 
     - name: Instalar dependências
       run: npm install
