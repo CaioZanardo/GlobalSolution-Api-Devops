@@ -1,5 +1,15 @@
 # Conteúdo criado para Global Solution de DIGITAL EXPERIENCE PLATAFORM(BackEnd) + OPTIMIZATION-TECHNOLOGY(FrontEnd) + CYBER SECURITY DEVOPS
 
+### Link do Frontend
+
+- https://github.com/CaioZanardo/GlobalSolution-Optimization
+
+### GitActions
+
+- Criado para validar se aplicação está funcionando;
+  - Validando o retorno do json sem dependencia do banco no path:
+    - http://localhost:3001/listaAtividade
+
 ### Banco de Dados
 
 - No Xampp iniciar:
@@ -7,19 +17,19 @@
   - Mysql;
     - Clicando em admin no "Mysql" abre a console;
 
-![PRINT!](xampp.png)
+![PRINT!](img/xampp.png)
 
-![PRINT!](console.png)
+![PRINT!](img/console.png)
 
 - Criar Banco "logindb";
  - Clicar em novo;
   
-![PRINT!](logindb.png)
+![PRINT!](img/logindb.png)
 
 - Criar Tabela "usuarios";
 - são 3 colunas;
  
-![PRINT!](usuariostb.png)
+![PRINT!](img/usuariostb.png)
 
 - Inserir 3 atributos
   - idusuarios:
@@ -29,9 +39,7 @@
   - password:
     - Varchar 255 pois temos uma função de criptografia para não gravar a senha exposta;
 
-![PRINT!](atributos.png)
-
-![PRINT!](tabela.png)
+![PRINT!](img/atributos.png)
 
 ### Bibliotecas utilizadas no projeto
 
@@ -54,17 +62,8 @@
     - Metodo: Get
     - URL: http://localhost:3001/listaAtividade
    
-![PRINT!](postman.png)
+![PRINT!](img/postman.png)
 
-### GitActions
-
-- Criado para validar se aplicação está funcionando! Validando o retorno do json no path:
-  - http://localhost:3001/listaAtividade
-
-### Frontend
-
-- https://github.com/CaioZanardo/GlobalSolution-Optimization
-  
 ## Grupo
 
 - André Spinelli Cintra RM 551016
