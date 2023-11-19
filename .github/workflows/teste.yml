@@ -13,16 +13,10 @@ jobs:
     steps:
     - name: Checkout do código
       uses: actions/checkout@v2
-    
-    - name: Listar Conteúdo do Diretório
-      run: ls
-    
+
     - name: Mover para o diretório da API
       run: cd api
-   
-    - name: Depurar
-      run: pwd && ls
-    
+
     - name: Instalar dependências
       run: npm install
 
