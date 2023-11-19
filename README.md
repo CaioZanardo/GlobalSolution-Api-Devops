@@ -17,16 +17,10 @@
 
 ### Frontend
 
-- Só baixar o front.zip;
+- https://github.com/CaioZanardo/GlobalSolution-Optimization
 - npm start na pasta "front" do conteudo;
 - "http://localhost:3000" abrir a tela de cadastro/login;
   
-![PRINT!](login.png)
-
-- Após cadastrar e logar, exibirá um alert, clicar em "OK" e exibirá a lista de atividades fisica o usuario.
-  
-![PRINT!](lista.png)
-
 ## Grupo
 
 - André Spinelli Cintra RM 551016
