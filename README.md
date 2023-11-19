@@ -33,6 +33,16 @@
 
 ![PRINT!](tabela.png)
 
+### Bibliotecas utilizadas no projeto
+
+- express;
+- mysql;
+- cors;
+- bcrypt;
+
+- #### Instalação: 
+   - npm install express mysql cors bcrypt
+
 ### Backend
 
 - no diretório "api" utilizar o npm start para iniciar a aplicação;
