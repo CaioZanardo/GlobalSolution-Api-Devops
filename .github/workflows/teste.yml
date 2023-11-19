@@ -13,9 +13,15 @@ jobs:
     steps:
     - name: Checkout do código
       uses: actions/checkout@v2
+    
+    - name: Listar Conteúdo do Diretório
+      run: ls
+    
+    - name: Depurar
+      run: pwd && ls
 
     - name: Mover para o diretório da API
-      run: cd GlobalSolution-Api-Devops/api
+      run: cd api
 
     - name: Instalar dependências
       run: npm install
