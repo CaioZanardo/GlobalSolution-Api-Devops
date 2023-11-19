@@ -1,0 +1,33 @@
+name: Testar Aplicação Node.js
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-app:
+    runs-on: ubuntu-latest
+    container: node:16
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v2
+
+    - name: Instalar dependências
+      run: npm install
+
+    - name: Iniciar a aplicação
+      run: npm start &
+
+    - name: Esperar pela inicialização da aplicação
+      run: sleep 10
+
+    - name: Rodar testes
+      run: |
+        # Adicione seus comandos de teste aqui
+        # Exemplo com curl:
+        curl -X GET http://localhost:3001/listaAtividade
+
+    - name: Parar a aplicação
+      run: kill $(pgrep node)
