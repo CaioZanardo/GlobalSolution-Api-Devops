@@ -14,6 +14,9 @@ jobs:
     - name: Checkout do código
       uses: actions/checkout@v2
 
+    - name: Limpar cache do npm
+      run: npm cache clean -f
+
     - name: Copiar conteúdo da pasta api
       run: cp -r api/* .
 
@@ -22,6 +25,9 @@ jobs:
 
     - name: Instalar dependências
       run: npm install
+
+    - name: Reinstalar bcrypt
+      run: npm uninstall bcrypt && npm install bcrypt
 
     - name: Iniciar a aplicação
       run: npm start &
