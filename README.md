@@ -13,12 +13,12 @@
 
 - Criar Banco "logindb";
  - Clicar em novo;
- - 
+  
 ![PRINT!](logindb.png)
 
 - Criar Tabela "usuarios";
 - são 3 colunas;
-- 
+ 
 ![PRINT!](usuariostb.png)
 
 - Inserir 3 atributos
