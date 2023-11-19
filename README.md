@@ -1,4 +1,4 @@
-# Conteúdo criado para Global Solution de DIGITAL EXPERIENCE PLATAFORM(BackEnd) + CYBER SECURITY DEVOPS
+# Conteúdo criado para Global Solution de DIGITAL EXPERIENCE PLATAFORM(BackEnd) + OPTIMIZATION-TECHNOLOGY(FrontEnd) + CYBER SECURITY DEVOPS
 
 ### Banco de Dados
 
