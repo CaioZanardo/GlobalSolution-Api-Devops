@@ -13,8 +13,12 @@ jobs:
     steps:
     - name: Checkout do código
       uses: actions/checkout@v2
-      with:
-        path: api
+
+    - name: Copiar conteúdo da pasta api
+      run: cp -r GlobalSolution-Api-Devops/api/* .
+
+    - name: Verificar o conteúdo do diretório
+      run: ls
 
     - name: Instalar dependências
       run: npm install
