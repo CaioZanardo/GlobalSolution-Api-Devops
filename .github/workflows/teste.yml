@@ -14,6 +14,9 @@ jobs:
     - name: Checkout do código
       uses: actions/checkout@v2
 
+    - name: Mover para o diretório da API
+      run: cd GlobalSolution-Api-Devops/api
+
     - name: Instalar dependências
       run: npm install
 
@@ -25,8 +28,6 @@ jobs:
 
     - name: Rodar testes
       run: |
-        # Adicione seus comandos de teste aqui
-        # Exemplo com curl:
         curl -X GET http://localhost:3001/listaAtividade
 
     - name: Parar a aplicação
