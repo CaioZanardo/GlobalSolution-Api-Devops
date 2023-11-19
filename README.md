@@ -2,12 +2,34 @@
 
 ### Banco de Dados
 
+- No Xampp iniciar:
+  - Apache;
+  - Mysql;
+    - Clicando em admin no "Mysql" abre a console;
+
+![PRINT!](xampp.png)
+
+![PRINT!](console.png)
+
 - Criar Banco "logindb";
+ - Clicar em novo;
+ - 
+![PRINT!](logindb.png)
+
 - Criar Tabela "usuarios";
-- são 3 colunas:
-  - idusuarios(Auto increment + chave primária);
-  - email;
-  - password;
+- são 3 colunas;
+- 
+![PRINT!](usuariostb.png)
+
+- Inserir 3 atributos
+  - idusuarios:
+    - Deixar como INT, selecionar A_I(Auto increment) no automático será a chave primária;
+  - email:
+    - Varchar 45;
+  - password:
+    - Varchar 255 pois temos uma função de criptografia para não gravar a senha exposta;
+
+![PRINT!](atributos.png)
 
 ![PRINT!](tabela.png)
 
@@ -20,13 +42,14 @@
   - Via front é exibida após usuário cadastrado se autenticar;
   - Pode ser chamada via postman para obter o resultado:
     - Metodo: Get
-    - URL: "http://localhost:3001/listaAtividade"
+    - URL: http://localhost:3001/listaAtividade
    
 ![PRINT!](postman.png)
 
 ### GitActions
 
-- Criado para validar se aplicação está funcionando! Validando o retorno do json no path: "http://localhost:3001/listaAtividade"
+- Criado para validar se aplicação está funcionando! Validando o retorno do json no path:
+  - http://localhost:3001/listaAtividade
 
 ### Frontend
 
