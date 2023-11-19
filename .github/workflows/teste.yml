@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Checkout do código
       uses: actions/checkout@v2
+      with:
+        path: GlobalSolution-Api-Devops
 
     - name: Mover para o diretório da API
       run: cd api
